@@ -2,12 +2,13 @@
   "name": "travel-site",
   "version": "1.0.0",
   "scripts": {
-   "webpack" : "webpack --config webpack.config.js",
-   "watch" : "gulp watch"
-   },
+    "webpack": "webpack --config webpack.config.js",
+    "watch": "gulp watch"
+  },
   "dependencies": {
     "jquery": "^3.3.1",
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.4.1",
