@@ -11392,7 +11392,7 @@ var StickyHeader = function () {
     key: 'refresWayPoints',
     value: function refresWayPoints() {
       this.lazyImages.on('load', function () {
-        Waypoints.refreshAll();
+        Waypoint.refreshAll();
       });
     }
   }, {
