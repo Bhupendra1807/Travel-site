@@ -3,6 +3,7 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 import smoothScroll from 'jquery-smooth-scroll';
 class StickyHeader{
   constructor(){
+    this.lazyImages=$('.lazyload');
     this.siteHeader=$('.site-header');
     this.headerTriggerElement=$('.large-hero__title');
     this.createHeaderWaypoints();
@@ -10,6 +11,12 @@ class StickyHeader{
     this.headerLinks=$('.primary-nav a');
     this.createPageSectionWayPoints();
     this.addSmoothScrolling();
+    this.refresWayPoints();
+  }
+  refresWayPoints(){
+    this.lazyImages.on('load', function(){
+      Waypoints.refreshAll();
+    });
   }
 
   addSmoothScrolling(){
